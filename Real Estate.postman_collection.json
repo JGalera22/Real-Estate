@@ -1,0 +1,431 @@
+{
+	"info": {
+		"_postman_id": "ae7f95c2-939d-41d1-a605-1db8f16c1b1a",
+		"name": "Real Estate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Viviendas",
+			"item": [
+				{
+					"name": "GET Todas las viviendas",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/viviendas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"viviendas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Crear vivienda",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"titulo\": \"Magnífico piso en Triana\",\r\n   \"descripcion\": \"En el corazón de Triana, en plena calle ...\",\r\n   \"precio\": 237345.28,\r\n   \"metrosCuadrados\": 185,\r\n   \"numeroHabitaciones\": 4,\r\n   \"direccion\": \"Nombre de la calle, número, ...\",\r\n   \"localidad\": \"Sevilla\",\r\n   \"provincia\": \"Sevilla\",\r\n   \"coordenadas\": \"37.38052916693116, -6.007566937303188\",\r\n   \"categoria\": \"Venta\"\r\n   \r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/viviendas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"viviendas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Todas las viviendas filtradas",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/viviendas?cat=todas&ciu=todas&pre=99999999",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"viviendas"
+							],
+							"query": [
+								{
+									"key": "cat",
+									"value": "todas"
+								},
+								{
+									"key": "ciu",
+									"value": "todas"
+								},
+								{
+									"key": "pre",
+									"value": "99999999"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Vivienda por Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/viviendas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"viviendas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Editar vivienda",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"titulo\": \"Magnífico piso en Triana\",\r\n   \"descripcion\": \"En el corazón de Triana, en plena calle ...\",\r\n   \"precio\": 237345.28,\r\n   \"metrosCuadrados\": 185,\r\n   \"numeroHabitaciones\": 4,\r\n   \"direccion\": \"Nombre de la calle, número, ...\",\r\n   \"localidad\": \"Sevilla\",\r\n   \"provincia\": \"Sevilla\",\r\n   \"coordenadas\": \"37.38052916693116, -6.007566937303188\",\r\n   \"categoria\": \"Venta\"\r\n   \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/viviendas/16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"viviendas",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Eliminar vivienda",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/viviendas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"viviendas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Viviendas usuario logueado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/viviendas/mine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"viviendas",
+								"mine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Viviendas favoritas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/viviendas/favs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"viviendas",
+								"favs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Añadir vivienda a favoritas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/viviendas/favs/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"viviendas",
+								"favs",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Eliminar vivienda de favoritas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/viviendas/favs/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"viviendas",
+								"favs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Imágenes",
+			"item": [
+				{
+					"name": "POST Crear imagen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9000/viviendas/2/img",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"viviendas",
+								"2",
+								"img"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Eliminar imagen",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/viviendas/1/img/hash",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"viviendas",
+								"1",
+								"img",
+								"hash"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Imagen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/files/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"files",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "POST Registro usuario",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"username\": \"lmlopez\",\r\n   \"passwd\": \"12345678\",\r\n   \"email\": \"luismi@email.com\",\r\n   \"nombreCompleto\": \"Luis Miguel López Magaña\",\r\n   \"fechaNacimiento\": \"1982-09-18\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"lmlopez\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NCIsImV4cCI6MTYxNTE5NzAxNywiaWF0IjoxNjE0OTM3ODE3LCJyZWZyZXNoIjpmYWxzZSwibm9tYnJlQ29tcGxldG8iOiJMdWlzIE1pZ3VlbCBMw7NwZXogTWFnYcOxYSIsInJvbGVzIjoiVVNFUiJ9.JL1JKAZcMi65RakZJAi0L7f1q1w1rWoBEhXQt75DLoCOksbqMafnzKtk46FqOtjOT-OjPoPxNHxhWttQiEZ-rw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
